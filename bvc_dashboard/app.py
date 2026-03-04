@@ -2,6 +2,9 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 import plotly.graph_objects as go
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent
 
 st.set_page_config(page_title="AlephMarketsCO", page_icon="📊", layout="wide")
 
@@ -71,7 +74,7 @@ ESTIMADAS = {"Grupo Aval", "Grupo Bolivar", "Ecopetrol", "GEB"}
 
 @st.cache_data
 def cargar_datos():
-    df = pd.read_csv("resultados_bvc.csv")
+    df = pd.read_csv(BASE_DIR / "resultados_bvc.csv")
     for c in ["Ingresos_Real","Ingresos_Est","Utilidad_Neta_Real","Utilidad_Neta_Est",
               "EBITDA_Real","EBITDA_Est","Margen_Neto_Pct","Deuda_Neta","Dividendo_COP"]:
         if c in df.columns:
@@ -81,7 +84,7 @@ def cargar_datos():
 @st.cache_data
 def cargar_2024():
     try:
-        df = pd.read_csv("resultados_bvc_2024.csv")
+        df = pd.read_csv(BASE_DIR / "resultados_bvc_2024.csv")
         for c in ["Ingresos_Real","Utilidad_Neta_Real","EBITDA_Real","Margen_Neto_Pct","Dividendo_COP"]:
             if c in df.columns:
                 df[c] = pd.to_numeric(df[c], errors="coerce")
