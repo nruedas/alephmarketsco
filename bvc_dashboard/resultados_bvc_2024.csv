@@ -1,10 +1,10 @@
-Empresa,Ticker_BVC,Ticker_YF,Sector,Periodo,Ingresos_Real,Ingresos_Est,Utilidad_Neta_Real,Utilidad_Neta_Est,EBITDA_Real,EBITDA_Est,Margen_Neto_Pct,Deuda_Neta,Dividendo_COP,Guidance,Supero
-Bancolombia,PFBANCOLOMBIA,CIB,Financiero,2024,31900,,6100,,,,19.1,,3536,Crecimiento moderado de cartera y control de provisiones,Si
-Grupo Aval,PFAVAL,AVAL,Financiero,2024,25400,,1400,,,,5.5,,39,Enfoque en eficiencia operativa y reduccion del costo de riesgo,No
-Grupo Bolivar,GRUPOBOLIVAR,GRUPOBOLIVAR.CL,Financiero,2024,28150,,1050,,,,3.7,,932,Fortalecimiento del capital de Davivienda y eficiencia en siniestralidad,No
-Ecopetrol,ECOPETROL,EC,Energia,2024,133300,,14935,,54100,,11.2,,214,Inversiones USD 6000 millones y produccion de 730-735 kbpd,No
-ISA,ISA,ISA.CL,Energia,2024,15800,,2800,,9700,,17.7,,1110,Resultados buenos que mostraron relacion con desempeno en 2025,Si
-GEB,GEB,GEB.CL,Energia,2024,7917,,2378,,5385,,30.0,,224,Foco en transmision de energia y normalizacion de dividendos de Enel,Si
-Grupo Argos,PFCEMARGOS,CEMARGOS.CL,Cemento,2024,15200,,7600,,5100,,50.0,,636,Simplificacion de estructura societaria y enfoque en infraestructura,Si
-Nutresa,NUTRESA,NUTRESA.CL,Alimentos,2024,18600,,752,,2380,,4.0,,0,Transicion operativa bajo nuevo control del Grupo Gilinski,Si
-Mineros,MINEROS,MINEROS.CL,Mineria,2024,2204,,354,,745,,16.1,,410,Produccion estimada entre 209000 y 229000 onzas de oro,Si
+Empresa,Ticker_BVC,Sector,Ingresos_Real,Utilidad_Neta_Real,EBITDA_Real,Margen_EBITDA_Pct,Margen_Neto_Pct,Variacion_Utilidad_Pct,Dividendo_COP,Supero,Notas
+Bancolombia,BCOL,Financiero,,6.3,,,,+2.4%,"3900",N/A,Bancos no reportan EBITDA. Utilidad creció +2.4%. Dividendo ordinario + extraordinario COP 4.524 aprobado en asamblea 2025.
+Grupo Aval,AVAL,Financiero,,1.015,,,,+37.4%,,N/A,Utilidad creció +37.4% vs 2023. Holding financiero.
+Grupo Bolívar,GBOLIV,Financiero,1.8,0.30,,,,,,N/A,Cifras 9M 2024. Año completo no publicado. Subyacente Davivienda COP 0.85 bn.
+Ecopetrol,ECO,Energía,133.3,14.9,54.1,41,11.2,-21.7%,214,Sí,Ingresos -6.8% vs 2023. EBITDA consolidado grupo incluye ISA.
+ISA,ISA,Infraestructura,15.8,2.8,9.7,61.4,17.7,+14%,1265,Sí,Mayor utilidad histórica. Cumplió meta ISA2030 con 113%.
+GEB,GEB,Infraestructura,8.0,2.5,5.1,63.8,31.3,,238,N/A,Ingresos +0.2% vs 2023. EBITDA ajustado.
+Grupo Argos,GARG,Industrial,15.2,7.6,5.1,33.6,50.0,+424%,,Sí,Utilidad +424% incluye combinación activos Argos USA + Summit Materials.
+Grupo Nutresa,NUTRESA,Alimentos,18.6,0.751,2.4,12.9,4.0,+4.3%,1136,N/A,Ingresos -1.7% vs 2023. EBITDA +7.8%.
+Mineros,MINER,Minería,2.2,0.354,1.42,64.5,16.1,+480%,,N/A,Ingresos +14.1% vs 2023. Utilidad +480% vs año muy bajo 2023.
