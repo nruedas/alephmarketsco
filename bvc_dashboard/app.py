@@ -273,13 +273,8 @@ elif pagina == "🏢 Resultados 2025":
         div_val  = r.get("Dividendo_COP","")
         div_str  = f"COP {float(div_val):,.0f}" if pd.notna(div_val) and str(div_val).strip() not in ["","nan"] else "N/D"
 
-        nr_html = ""
-        if tiene_nr:
-            nrn = r.get("Nota_No_Recurrente","")
-            nr_html = f'<div class="nr-box"><span class="nr-label">* Evento no recurrente:</span> {nrn}</div>'
-
-        notas    = r.get("Notas","")
-        notas_html = f'<div class="guidance-box"><span class="guidance-label">Notas: </span>{notas}</div>' if pd.notna(notas) and str(notas).strip() else ""
+        nrn   = r.get("Nota_No_Recurrente","")
+        notas = r.get("Notas","")
 
         st.markdown(f"""
         <div class="{cc}">
@@ -322,10 +317,12 @@ elif pagina == "🏢 Resultados 2025":
                     <div class="metric-value">{div_str}</div>
                 </div>
             </div>
-            {nr_html}
-            {notas_html}
         </div>
         """, unsafe_allow_html=True)
+        if tiene_nr and pd.notna(nrn) and str(nrn).strip():
+            st.markdown(f'<div class="nr-box" style="margin-top:-8px;margin-bottom:4px"><span class="nr-label">* Evento no recurrente:</span> {nrn}</div>', unsafe_allow_html=True)
+        if pd.notna(notas) and str(notas).strip():
+            st.markdown(f'<div class="guidance-box" style="margin-top:2px;margin-bottom:10px"><span class="guidance-label">Notas: </span>{notas}</div>', unsafe_allow_html=True)
 
 # ──────────────────────────────────────────────────────────────────────────────
 # PÁGINA: RESULTADOS 2024
@@ -348,7 +345,6 @@ elif pagina == "📊 Resultados 2024":
             div_val  = r.get("Dividendo_COP","")
             div_str  = f"COP {float(div_val):,.0f}" if pd.notna(div_val) and str(div_val).strip() not in ["","nan"] else "N/D"
             notas    = r.get("Notas","")
-            notas_html = f'<div class="guidance-box"><span class="guidance-label">Notas: </span>{notas}</div>' if pd.notna(notas) and str(notas).strip() else ""
 
             st.markdown(f"""
             <div class="{cc}">
@@ -386,9 +382,10 @@ elif pagina == "📊 Resultados 2024":
                         <div class="metric-value">{div_str}</div>
                     </div>
                 </div>
-                {notas_html}
             </div>
             """, unsafe_allow_html=True)
+            if pd.notna(notas) and str(notas).strip():
+                st.markdown(f'<div class="guidance-box" style="margin-top:2px;margin-bottom:10px"><span class="guidance-label">Notas: </span>{notas}</div>', unsafe_allow_html=True)
 
 # ──────────────────────────────────────────────────────────────────────────────
 # PÁGINA: COMPARATIVO YOY
