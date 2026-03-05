@@ -70,7 +70,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-ESTIMADAS = {"Grupo Aval", "Grupo Bolivar", "Ecopetrol", "GEB"}
+ESTIMADAS = {"Grupo Aval", "Grupo Bolivar", "GEB"}
 
 @st.cache_data
 def cargar_datos():
